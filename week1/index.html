@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Winter 2013 - Wk1</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <style>
+    a {
+        text-decoration: none;
+    }
+    .wrapper {
+        width: 960px;
+        margin: 0 auto;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        background: white;
+    }
+    .hd {
+background: rgb(212,228,239);
+background: -moz-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(212,228,239,1)), color-stop(100%,rgba(134,174,204,1)));
+background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%);
+background: -o-linear-gradient(top, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%);
+background: -ms-linear-gradient(top, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%);
+background: linear-gradient(to bottom, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc',GradientType=0 );
+    }
+    .ft {
+        box-shadow: none;
+        background: transparent;
+        margin-top: 20px;
+    }
+    .bd .liner {
+        padding: 10px;
+    }
+    .nav li {
+        display: inline-block;
+        margin: 3px;
+        border-radius: 3px;
+
+    }
+    .nav a {
+        display: inline-block;
+        padding: 0 8px;
+        height: 28px;
+        line-height: 28px;
+        color: #ffffff;
+    }
+    .nav li.current,
+    .nav li:hover {
+        background: rgb(0, 168, 219);
+        box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+    }
+    .nav .current a {
+        cursor: default;
+    }
+    </style>
+</head>
+<body id="foo">
+
+    <div id="cat" class="hd wrapper"><div class="liner">
+        <h1>Header</h1>
+        <ul class="nav">
+            <li class="current"><a href="#"><span>Home</span></a></li><!--
+            --><li><a href="#"><span>About Us</span></a></li><!--
+            --><li><a href="#"><span>Projects</span></a></li><!--
+            --><li><a href="#"><span>Contact Us</span></a></li>
+        </ul>
+    </div></div>
+
+    <div class="bd wrapper"><div class="liner">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur est erat, pellentesque et venenatis quis, aliquet et sem. Vivamus blandit euismod urna ut scelerisque. Aliquam volutpat libero eget erat euismod eget malesuada leo eleifend. Pellentesque sed odio vitae est ornare eleifend. Pellentesque risus ligula, egestas eu eleifend eget, cursus eget erat. Vivamus enim ipsum, pretium at luctus vel, vulputate at arcu. Proin a elit dolor. Sed sagittis laoreet dolor ac bibendum. Vestibulum at ligula ipsum, quis adipiscing nisi. Duis massa turpis, elementum nec lacinia eu, ultrices a justo. Aenean sed dapibus velit. In porta adipiscing dapibus. Pellentesque suscipit tellus est. Vivamus sit amet nisl erat, eu mattis nulla. Vivamus sit amet lorem turpis, eu tempus ipsum. Suspendisse molestie ligula ultricies lorem commodo interdum.</p>
+        <p>Proin et lectus libero, id facilisis ante. Sed dapibus dui vitae velit consectetur faucibus. Duis in lobortis massa. Curabitur quis quam sed orci faucibus ultrices sed ac odio. Sed at magna dui. Duis sed bibendum mi. Suspendisse nibh urna, dictum lacinia dapibus molestie, viverra non velit. Maecenas viverra elit eget orci faucibus vestibulum. Aliquam rhoncus auctor ullamcorper. Fusce sed elit tellus, consequat sollicitudin metus.</p>
+    </div></div>
+
+    <div class="ft wrapper"><div class="liner">
+        &copy; 2013
+    </div></div>
+
+</body>
+</html>
