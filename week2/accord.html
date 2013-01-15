@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Winter 2013 - Wk2</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <style>
+        .accView {
+            position: relative;
+            width: 300px;
+        }
+        .accs {
+            overflow: hidden;
+        }
+        .acc {
+            border: 1px solid blue;
+            border-bottom-width: 0;
+            padding: 0 8px;
+            line-height: 22px;
+            border-radius: 3px 3px 0 0;
+            margin: 2px 2px 0;
+            box-shadow: inset 0 -2px 2px 0px rgba(0,0,0,0.3);
+        }
+        .acc-active {
+            background: red;
+            box-shadow: none;
+        }
+        .acc-content {
+            width: 300px;
+            border-top: 1px solid blue;
+            padding: 0 10px;
+            height: 0;
+            overflow: hidden;
+            -webkit-transition: height 0.3s cubic-bezier(.69, .47, .12, .83);
+        }
+        .acc-active-content {
+            height: 400px;
+            padding: 10px;
+            -webkit-transition: height 0.3s cubic-bezier(.77, .19, .20, .42);
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="accView">
+
+        <h2 class="acc acc-active"><a href="#acc1">Apple</a></h2>
+        <div id="acc1" class="acc-content acc-active-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mi leo, consequat ac placerat ut, feugiat at sem. Aliquam erat volutpat. Sed in eros nisi. Donec tincidunt auctor velit quis eleifend. Aliquam euismod, tellus id condimentum gravida, ipsum urna pharetra nisl, vitae laoreet dolor libero id augue. Suspendisse rhoncus ultricies metus vulputate cursus. Etiam dolor ligula, aliquam nec pulvinar in, aliquet quis nisi. Morbi rutrum, sapien iaculis malesuada vulputate, ipsum neque placerat tellus, sit amet imperdiet tortor elit sit amet lacus. Mauris posuere leo quis massa commodo et ultricies tortor rutrum. Donec hendrerit nulla at lectus vulputate vestibulum. Integer erat nisl, rutrum sit amet semper sed, ornare vel orci. Mauris vitae ligula nisl. Fusce hendrerit elit dui. Nunc ullamcorper, velit molestie elementum molestie, eros tellus vulputate massa, ac tempus lacus felis id sem.</p>
+        </div>
+
+        <h2 class="acc"><a href="#acc2">Banana</a></h2>
+        <div id="acc2" class="acc-content">
+            <p><img src="http://placekitten.com/50/100"> Sed consequat gravida mauris, at viverra dolor vehicula sodales. Cras fermentum blandit sem, et lobortis elit posuere at. Sed sit amet velit id justo rutrum viverra. Cras lobortis elementum tellus, nec volutpat felis pellentesque eu. Fusce ornare dictum hendrerit. Donec aliquam bibendum felis a lobortis. Cras sed lacus urna. Suspendisse potenti. Fusce dolor ante, vulputate ut lobortis nec, varius bibendum diam. Vestibulum eget ligula nec urna mollis egestas. Aliquam lacinia consectetur urna, ac mattis dui pulvinar quis. Duis aliquet porttitor ultrices. Nunc et orci quam. Nullam faucibus porta feugiat. Cras volutpat ullamcorper cursus.</p>
+        </div>
+
+        <h2 class="acc"><a href="#acc3">Mango</a></h2>
+        <div id="acc3" class="acc-content">
+            <p>Nullam nec feugiat elit. Pellentesque auctor dapibus nibh, vitae auctor ipsum varius a. Nulla molestie velit vitae velit pellentesque bibendum non at purus. Curabitur nec consectetur nisl. Nunc rhoncus tristique massa, ac cursus nisi porttitor vitae. Ut sit amet tortor sem. Nulla id metus felis. Mauris eget mauris urna. Nam ac bibendum tortor. Nullam in mi ac nisi condimentum convallis.</p>
+        </div>
+
+    </div>
+
+    <script>
+    $( document ).ready(function() {
+        $('.acc').click(function(e) {
+            $('.acc-active').removeClass('acc-active');
+            $('.acc-active-content').removeClass('acc-active-content');
+
+            $(this).addClass('acc-active');
+
+            var href = $(this).find('a').attr('href');
+
+            $(href).addClass('acc-active-content');
+        });
+    });
+    </script>
+</body>
+</html>
