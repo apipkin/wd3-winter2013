@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        .outside {
+            background: red;
+            padding: 50px;
+            position: relative;
+        }
+        .inline {
+            display: block;
+            background: blue;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 10px;
+            -webkit-transition: all 0.5s cubic-bezier(.08, .32, .47, .89) 1s;
+        }
+        .inline:hover {
+            height: 150px;
+            background: yellow;
+            -webkit-transition: background 0.5s cubic-bezier(.08, .32, .47, .89);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="outside">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies tincidunt sapien, commodo consequat mi eleifend a. Donec nibh odio, faucibus nec scelerisque tincidunt, porttitor pretium elit. Praesent quis luctus ligula. Phasellus accumsan, ligula et scelerisque euismod, magna turpis ullamcorper dolor, quis ultrices nunc diam sed velit. Proin lectus massa, lobortis eget vulputate at, tempus non mauris. Quisque vehicula sapien vel eros pharetra vitae consectetur quam eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <span class="inline">Fooga</span>
+        <p>Mauris consequat rhoncus ornare. Nulla nunc elit, viverra lacinia ornare facilisis, sagittis non lorem. Vestibulum venenatis egestas auctor. Vestibulum et ullamcorper augue. Ut semper est sit amet felis fermentum venenatis. Aenean nunc enim, venenatis eu ultrices fermentum, volutpat in eros. Nam dignissim, urna quis ultrices commodo, velit turpis tincidunt libero, a rhoncus nulla augue eu elit. Nam lectus arcu, fringilla id pellentesque non, blandit nec sem. Fusce ornare massa a nisi placerat eget congue ipsum dictum. Ut convallis vulputate nisi, vel molestie metus placerat ut. Vivamus quis suscipit enim. Aliquam tincidunt ligula adipiscing mi malesuada tincidunt.</p>
+    </div>
+
+
+
+
+</body>
+</html>
