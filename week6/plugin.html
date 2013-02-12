@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Winter 2013 - Wk6</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <style>
+
+
+    .accordion {
+        width: 300px;
+        border: 1px solid hsl(250, 60%, 20%);
+        margin: 20px;
+    }
+    .accordion h2 {
+        background: blue;
+        color: white;
+        padding: 0 10px;
+        line-height: 1.8em;
+    }
+
+    .accordion > div {
+        overflow: hidden;
+        height: 0;
+    }
+    .accordion .liner {
+        padding: 10px;
+    }
+
+    .accordion .open {
+        height: auto;
+    }
+
+
+
+
+
+
+    </style>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./js/accordion/jquery.accordion.js"></script>
+</head>
+<body>
+
+
+<ul>
+                <li>
+                    <div class="handle">Login</div>
+                    <div class="panel">
+                        <form action="#" method="post">
+                            <p>
+                                <label for="username1">Username</label><br>
+                                <input type="text" name="username" id="username1">
+                            </p>
+                            <p>
+                                <label for="password1">Password</label><br>
+                                <input type="password" name="password" id="password1">
+                            </p>
+                            <p>
+                                <input type="submit" value="Login">
+                            </p>
+                        </form>
+                    </div>
+                </li>
+                <li>
+                    <div class="handle">Cupcakes</div>
+                    <div class="panel">
+                        <p>
+                            Cupcake ipsum dolor sit amet pastry chupa chups pie gummi bears. Biscuit marzipan croissant
+                            sweet roll marzipan icing cotton candy apple pie. Cheesecake candy canes biscuit wafer soufflé
+                            lollipop.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="handle">Strawberries</div>
+                    <div class="panel">
+                        <img src="demo/strawberries.jpg">
+                    </div>
+                </li>
+            </ul>
+
+    <script>
+
+        $('ul').accordion();
+
+
+    </script>
+</body>
+</html>

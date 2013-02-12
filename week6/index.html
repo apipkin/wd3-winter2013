@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Winter 2013 - Wk6</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <style>
+
+
+    .accordion {
+        width: 300px;
+        border: 1px solid hsl(250, 60%, 20%);
+        margin: 20px;
+    }
+    .accordion h2 {
+        background: blue;
+        color: white;
+        padding: 0 10px;
+        line-height: 1.8em;
+    }
+
+    .accordion > div {
+        overflow: hidden;
+        height: 0;
+    }
+    .accordion .liner {
+        padding: 10px;
+    }
+
+    .accordion .open {
+        height: auto;
+    }
+
+
+
+
+
+
+    </style>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+
+
+    <div class="accordion">
+        <h2>Aadvark</h2>
+        <div class="open"><div class="liner">
+            Lollipop topping marshmallow tootsie roll tootsie roll dessert. Chocolate cake carrot cake apple pie caramels biscuit toffee wafer macaroon. Muffin marzipan gummies topping croissant. Brownie chocolate bar donut candy dessert tart gingerbread marshmallow. Cupcake cookie biscuit chupa chups cotton candy croissant jelly-o jelly-o lollipop. Candy apple pie croissant sweet. Icing gummi bears cookie halvah pie marshmallow apple pie. Candy canes jelly beans wafer icing jelly chocolate bar brownie donut. Apple pie cotton candy sweet. Powder pudding fruitcake donut cookie tootsie roll apple pie. Sugar plum cupcake sweet carrot cake gummies gingerbread danish sugar plum halvah. Ice cream bonbon topping. Bear claw soufflé topping ice cream tiramisu pastry lollipop.
+        </div></div>
+        <h2>Badger</h2>
+        <div><div class="liner">
+            Toffee halvah jelly soufflé candy caramels chocolate cake. Pudding lollipop applicake sugar plum. Cookie tootsie roll chupa chups tiramisu chocolate bar. Cotton candy icing oat cake carrot cake pie soufflé. Macaroon danish danish fruitcake toffee. Jelly apple pie cookie sweet roll sweet roll macaroon. Halvah lemon drops sweet roll wafer topping. Chocolate bar fruitcake pastry liquorice cookie cake gingerbread candy canes. Jelly cake soufflé. Gingerbread cookie danish liquorice. Ice cream sweet gummi bears. Muffin croissant cotton candy. Topping apple pie gingerbread apple pie cookie gingerbread lemon drops pudding topping. Sweet roll pudding ice cream pastry.
+        </div></div>
+        <h2>Zebra</h2>
+        <div><div class="liner">
+            Biscuit bonbon candy canes marzipan candy tiramisu croissant. Icing pie chocolate bar lemon drops halvah jelly-o sesame snaps croissant. Gummies caramels candy chupa chups. Chocolate bar caramels caramels jelly-o dragée. Icing chupa chups chocolate marshmallow gummies gummi bears chocolate bar. Pastry cotton candy macaroon tart cake candy canes fruitcake lollipop. Sugar plum apple pie liquorice wypas topping chocolate sweet. Candy sesame snaps sweet jelly powder cheesecake halvah ice cream tart. Fruitcake muffin lollipop. Chocolate cake cheesecake cotton candy faworki. Chocolate muffin macaroon fruitcake jelly beans tootsie roll muffin tiramisu. Donut powder wafer pudding pie cookie. Sugar plum oat cake wafer carrot cake. Faworki cotton candy pie bear claw icing bear claw chupa chups.
+        </div></div>
+    </div>
+
+
+    <script>
+
+        $('.accordion h2').click(function(e) {
+
+            $('.accordion .open, .accordion .selected').slideUp('slow',function() {
+                $(this).removeClass('open').removeClass('selected');
+            });
+
+            $(this).next().slideDown(300,function () {
+                $(this).addClass('selected').css('height', 'auto');
+
+            });
+        });
+
+
+    </script>
+</body>
+</html>
