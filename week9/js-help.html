@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Winter 2013 - No JavaScript</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <style>
+
+    .wrapper {
+        width: 900px;
+        margin: 30px auto;
+        box-shadow: 0 0 10px rgba( 0,0,0,0.3);
+    }
+
+    .panels {
+        overflow: hidden;
+        position: relative;
+        background: rgba( 0,0,0,0.3);
+    }
+    .container {
+        background: white;
+    }
+    .panel {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-transition: left 0.5s ease-in-out;
+    }
+    .panel-first {
+        position: relative;
+    }
+
+    .liner {
+        position: relative;
+        border-left: 2px solid white;
+    }
+    h2 {
+        position: absolute;
+        color: hsl(15, 50%, 95%);
+        text-shadow: 0 0 8px hsla(250, 60%, 10%, 0.8);
+        -webkit-transform: rotate(-90deg);
+        -webkit-transform-origin: left bottom;
+        bottom: 15px;
+        left: 55px;
+        font-size: 40px;
+        font-family: sans-serif;
+    }
+    img {
+        box-shadow: inset 0 0 5px 5px white;
+    }
+
+
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="panels">
+            <ul class="container">
+                <li class="panel panel-first">
+                    <div class="liner">
+                        <h2 class="title">Landscapes</h2>
+                        <img src="assets/landscapes.jpg">
+                    </div>
+                </li>
+                <li class="panel">
+                    <div class="liner">
+                        <h2 class="title">People</h2>
+                        <img src="assets/people.jpg">
+                    </div>
+                </li>
+                <li class="panel">
+                    <div class="liner">
+                        <h2 class="title">Nature</h2>
+                        <img src="assets/nature.jpg">
+                    </div>
+                </li>
+                <li class="panel">
+                    <div class="liner">
+                        <h2 class="title">Urban</h2>
+                        <img src="assets/urban.jpg">
+                    </div>
+                </li>
+                <li class="panel panel-last">
+                    <div class="liner">
+                        <h2 class="title">Abstract</h2>
+                        <img src="assets/abstract.jpg">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function(){
+        var panelsWidth = $('.panels').width(),
+            panels = $('.panel'),
+            allCollapseOffset = panelsWidth / panels.size(),
+            minPanelOffset = 100,
+            maxPanelOffset = panelsWidth - (panels.size() * minPanelOffset);
+
+        function resetPanels() {
+            panels.each(function(index){
+                $(this).css('left', index * allCollapseOffset + 'px');
+            });
+        }
+
+        panels.hover(function() {
+            var hoverIndex = panels.index(this),
+                left = 0;
+
+            panels.each(function(index) {
+                if (index > hoverIndex) {
+                    left = index * minPanelOffset + maxPanelOffset;
+                } else {
+                    left = index * minPanelOffset;
+                }
+                $(this).css('left', left + 'px');
+            });
+        }, resetPanels);
+
+        resetPanels();
+
+    });
+    </script>
+</body>
+</html>
