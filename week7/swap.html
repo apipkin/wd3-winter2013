@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Winter 2013 - Wk7</title>
+    <meta charset="utf-8">
+    <!-- REMOTE CSS - GLOBAL -->
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <!-- LOCAL CSS -->
+    <style>
+    .board {
+        margin: 50px;
+        position: relative;
+    }
+    .tile {
+        width: 75px;
+        height: 150px;
+        background: #fff center bottom no-repeat fixed;
+        border-radius: 5px;
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+        line-height: 150px;
+        font-size: 50px;
+        text-align: center;
+        color: #fff;
+        position: absolute;
+    }
+    .left {
+        left: 200px;
+        z-index: 5;
+    }
+    .right {
+        left: 240px;
+        z-index: 6;
+        top: 20px;
+    }
+    .colors {
+        background-image: url('images/colors.jpg');
+    }
+    .sunset {
+        background-image: url('images/sunset.jpg');
+    }
+
+
+    </style>
+    <!-- REMOTE SCRIPTS - LIBRARIES -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+</head>
+<body>
+
+    <a href="#" class="button">Swap</a>
+    <div class="board">
+        <div class="tile left colors">
+            A
+        </div>
+        <div class="tile right sunset">
+            B
+        </div>
+    </div>
+
+    <script>
+    $('.button').click(function(e){
+        e.preventDefault();
+
+        $('.left').animate({
+            left: 270,
+            top: 5
+        }, function () {
+            $(this).removeClass('left').addClass('right').animate({
+                left: 240,
+                top: 20
+            })
+        });
+
+        $('.right').animate({
+            left: 150,
+            top: 15
+        }, function () {
+            $(this).removeClass('right').addClass('left').animate({
+                left: 200,
+                top: 0
+            })
+        });
+    });
+    </script>
+</body>
+</html>
